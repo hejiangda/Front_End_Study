@@ -1,3 +1,28 @@
+body{
+    font-size: 10px;
+    background: rgb(149,194,215);
+}
+
+a{
+    text-decoration: none;
+}
+
+.thumbnail-item + .thumbnail-item{
+    margin-top: 10px;
+}
+.thumbnail-list{
+    list-style: none;
+    padding: 0%;
+}
+.thumbnail-item{
+    display: block;
+    border: 1px solid rgb(100%,100%,100%);
+    border: 1px solid rgba(100%,100%,100%,0.8);
+}
+.thumbnail-image{
+    display:block;
+    width: 100%;
+}
 .thumbnail-title{
     display: block;
     margin: 0;
@@ -5,4 +30,6 @@
 
     background: rgb(96,125,139);
     color: rgb(202,238,255);
+
+    font-size: 18px;
 }
