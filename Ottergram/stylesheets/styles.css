@@ -10,7 +10,7 @@
 }
 body{
     font-size: 10px;
-    background: rgb(149,194,215);
+    background: rgb(255,160,198);
 }
 
 a{
@@ -45,8 +45,8 @@ a{
     margin: 0;
     padding: 4px 10px;
 
-    background: rgb(96,125,139);
-    color: rgb(202,238,255);
+    background: rgb(204, 115, 184);
+    color: rgb(251, 251, 251);
 
     font-size: 18px;
 }
