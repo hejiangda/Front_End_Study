@@ -10,7 +10,7 @@
 }
 body{
     font-size: 10px;
-    background: rgb(255,160,198);
+    background: rgb(213,231,243);
 }
 
 a{
@@ -30,9 +30,13 @@ a{
 .thumbnail-list{
     list-style: none;
     padding: 0%;
+
+    white-space: nowrap;
+    overflow-x: auto;
 }
 .thumbnail-item{
-    display: block;
+    display: inline-block;
+    width: 120px;
     border: 1px solid rgb(100%,100%,100%);
     border: 1px solid rgba(100%,100%,100%,0.8);
 }
@@ -48,8 +52,11 @@ a{
     margin: 0;
     padding: 4px 10px;
 
-    background: rgb(204, 115, 184);
-    color: rgb(251, 251, 251);
+    background: rgb(80, 121, 155);
+    color: rgb(240, 248, 252);
 
     font-size: 18px;
+}
+.detail-image{
+    width:90%;
 }
