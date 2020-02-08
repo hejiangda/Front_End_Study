@@ -100,7 +100,7 @@ a{
     position: relative;
     text-align: center;
 
-    transition: transform 333ms cubic-bezier(1,.06,.28,1);
+    transition: transform 333ms cubic-bezier(.12,1.45,.73,-0.42);
 }
 .is-tiny{
     transform: scale(0.001);
