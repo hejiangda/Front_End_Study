@@ -8,8 +8,8 @@
     }
 
     Truck.prototype.creatOrder=function(order){
-        console.log('Adding order for'+order.emailAddress);
-        this.db.add(order.emailAddress,order);
+        console.log('Adding order for '+order.email);
+        this.db.add(order.email,order);
     };
 
     Truck.prototype.deliverOrder=function(customerId){
@@ -17,6 +17,14 @@
         this.db.remove(customerId);
     };
 
+    Truck.prototype.printOrders=function(){
+        var customerIdArray=Object.keys(this.db.getAll());
+        console.log('Truck #'+this.truckId+' has pending orders:');
+        var db=this.db;
+        customerIdArray.forEach(function(id){
+            console.log(db.get(id));
+        });
+    };
     App.Truck=Truck;
     window.App=App;
 })(window);
