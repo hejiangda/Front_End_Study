@@ -7,7 +7,7 @@
         this.db=db;
     }
 
-    Truck.prototype.creatOrder=function(order){
+    Truck.prototype.createOrder=function(order){
         console.log('Adding order for '+order.email);
         this.db.add(order.email,order);
     };
