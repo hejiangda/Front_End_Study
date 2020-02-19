@@ -11,7 +11,7 @@
     var Validation=App.Validation;
     var CheckList=App.CheckList;
     var remoteDS=new RemoteDataStore(SERVER_URL);
-    var myTruck=new Truck('ncc-1701',remoteDS);
+    var myTruck=new Truck('ncc-1701',new DataStore());
     window.myTruck=myTruck;
     var checkList=new CheckList(CHECKLIST_SELECTOR);
     checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
@@ -19,11 +19,18 @@
 
     formHandler.addSubmitHandler(
         function(data){
-            myTruck.createOrder.call(myTruck,data);
-            checkList.addRow.call(checkList,data);
+            return myTruck.createOrder.call(myTruck,data)
+            .then(function(){
+                checkList.addRow.call(checkList,data);
+            },
+            
+            function(){
+                alert('Server unreachable. Try again later.');
+            })
         }
     );
 
     formHandler.addInputHandler(Validation.isCompanyEmail);
 
+    myTruck.printOrders(checkList.addRow.bind(checkList));
 })(window);
