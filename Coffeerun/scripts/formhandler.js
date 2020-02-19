@@ -28,6 +28,14 @@
         });
     }
 
+    FormHandler.prototype.addInputHandler=function(fn){
+        console.log('Setting input handler for form');
+        this.$formElement.on('input','[name="emailAddress"]',function(event){
+            var emailAddress=event.target.value;
+            console.log(fn(emailAddress));
+        });
+    };
+
     App.FormHandler=FormHandler;
     window.App=App;
 })(window);
